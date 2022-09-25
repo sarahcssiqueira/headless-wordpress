@@ -1,1 +1,1 @@
-# headless-wordpress
+# Headless Wordpress
