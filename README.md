@@ -29,38 +29,49 @@ WordPress and React both have a large community and provide a wide range of feat
 
 # How to setup WordPress for React Js
 
-Let’s begin with setting up the WordPress site, as this will act as a data source for our front-end React application.
+## Requirements 
+
+For this project we need:
+
+- WordPress Instalation running
+- WP-Rest API Plugin
+- Postman
+- React App
+- Axios dependency
+
+Let’s begin with setting up the WordPress site, here I'm assuming you already have a running wordpress website. This will act as a data source for our front-end React application.
 
 - We should use the WP-Rest API plugin. It will enable WordPress Rest API inside our WordPress website.
 
-- Go to Settings → Permalinks and select either Post name or Custom Structure.
+- Then, inside your WordPress website, go to Settings → Permalinks and select either Post name or Custom Structure.
 
-- Since we are working with API calls, download the chrome extension for Postman. Inside the Postman, enter the URL in the following format:
+- Since we are working with API calls, download the chrome extension for **Postman**. Inside the Postman, enter the URL in the following format:
 
-https://example.com/wp-json/wp/v2/posts
+https://example.com/wp-json/wp/v2/posts (replace example.com with your wordpress domain)
 
 The above URL will fetch the posts data inside our WordPress site.
 
 To verify that the data is available via API, go ahead and hit the URL inside the Postman.
 
-The URL should look something like https://exampe.com/wp-json/wp/v2/posts.
+The URL should look something like https://example.com/wp-json/wp/v2/posts.
 
 
-# What’s ReactJS
+# Create a React App
 
-- Create a React App
-I will not give further details to satrt a react app here
-For that, check **npx create-react-app**
+I will not give further details about how to create a react app, it's out of the scope of this project. To see how to do this, check https://reactjs.org/docs/create-a-new-react-app.html
 
-- npm i axios
+After create our React App wer will need some dependencies:
 
-Now, open the folder inside your favorite text editor. I am using the Visual Studio Code.
+- Npm i axios
 
-Launch the application by running the command npm start.
+After axios install we can launch the application by running the command **npm start.**
 
 We are all set to build our web application with React using WordPress as headless CMS if everything works properly.
 
-- Create a new folder ‘components’ inside the src folder, and inside the ‘components’ folder, create a new file ‘Posts.js.’
+## Components
+
+Create a new folder ‘components’ inside the src folder, and inside the ‘components’ folder, create a new file [‘Posts.js.’] (https://github.com/sarahcssiqueira/headless-wordpress/blob/master/src/components/Posts.js)
+
 
 
 # How to Render Post Data on ReactJS
@@ -69,25 +80,22 @@ Inside the Post.js file, we will fetch the data from the WordPress Rest API. In 
 
 This code will show the array of data in the console, which is then utilized inside the render block.
 
-Now, inside the App.js file, we should call the Posts component.
+Now, inside the [App.js](https://github.com/sarahcssiqueira/headless-wordpress/blob/master/src/App.js) file, we should call the Post component.
 
 
-**App.js is the entry point of our web application. Therefore, it is important to reference the “Posts” components inside this file.**
 
-How to Display Post Data on ReactJS
-The data can be displayed by adding the code inside the render method.
+App.js is the entry point of our web application. Therefore, it is important to reference the “Posts” components inside this file.
 
-Instead of displaying data here, we will create a new component and name it ‘BookItems.js’ as I want to keep it separate from the parent component.
+## How to Display Post Data on ReactJS
 
-Change the render method inside Post.js to something like:
+The data can be displayed by adding the code inside the render method. We will create a new component and name it **[‘PostItems.js’**](https://github.com/sarahcssiqueira/headless-wordpress/blob/master/src/components/PostItems.js) as we want to keep it separate from the parent component.
 
-Now, we need to render the PostItems component instead.
 
-Inside the BookItems.js, add the following code:
+We have to change the render method inside Post.js (check the file)
 
-In the code above, I’m referencing the book prop to get the title and other information.
+Then we need to render the PostItems component instead.
 
-Note: Make sure to reference the BookItems component inside the “Books” component.
+!Note: Make sure to reference the PostItems component inside the “Posts” component.
 
 
 # Wrapping up!
@@ -96,5 +104,5 @@ However, **It is not limited to React**. You can also experiment with **VueJS, A
 There are tons of things you can do with WordPress Rest API. The sky’s the limit, so go ahead and use WordPress for your next web project.
 
 
-Credits: https://www.cloudways.com/blog/use-react-with-wordpress-to-create-headless-cms/
-https://wpwebinfotech.com/blog/headless-wordpress-react/
+Credits: [Cloudways] (https://www.cloudways.com/blog/use-react-with-wordpress-to-create-headless-cms/)
+[WP Infotech] (https://wpwebinfotech.com/blog/headless-wordpress-react/)
