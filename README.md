@@ -70,7 +70,7 @@ We are all set to build our web application with React using WordPress as headle
 
 ## Components
 
-Create a new folder ‘components’ inside the src folder, and inside the ‘components’ folder, create a new file [‘Posts.js.’] (https://github.com/sarahcssiqueira/headless-wordpress/blob/master/src/components/Posts.js)
+Create a new folder ‘components’ inside the src folder, and inside the ‘components’ folder, create a new file [‘Posts.js.’](https://github.com/sarahcssiqueira/headless-wordpress/blob/master/src/components/Posts.js)
 
 
 
@@ -88,7 +88,7 @@ App.js is the entry point of our web application. Therefore, it is important to 
 
 ## How to Display Post Data on ReactJS
 
-The data can be displayed by adding the code inside the render method. We will create a new component and name it **[‘PostItems.js’**](https://github.com/sarahcssiqueira/headless-wordpress/blob/master/src/components/PostItems.js) as we want to keep it separate from the parent component.
+The data can be displayed by adding the code inside the render method. We will create a new component and name it[‘PostItems.js’](https://github.com/sarahcssiqueira/headless-wordpress/blob/master/src/components/PostItems.js) as we want to keep it separate from the parent component.
 
 
 We have to change the render method inside Post.js (check the file)
@@ -104,5 +104,5 @@ However, **It is not limited to React**. You can also experiment with **VueJS, A
 There are tons of things you can do with WordPress Rest API. The sky’s the limit, so go ahead and use WordPress for your next web project.
 
 
-Credits: [Cloudways] (https://www.cloudways.com/blog/use-react-with-wordpress-to-create-headless-cms/)
-[WP Infotech] (https://wpwebinfotech.com/blog/headless-wordpress-react/)
+Credits: [Cloudways](https://www.cloudways.com/blog/use-react-with-wordpress-to-create-headless-cms/)
+[WP Infotech](https://wpwebinfotech.com/blog/headless-wordpress-react/)
