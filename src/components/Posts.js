@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios';
-import PostItems from './PostItems';
+import PostDetails from './PostDetails';
 
 export class Posts extends Component {
    state = {
@@ -9,21 +9,20 @@ export class Posts extends Component {
    }
 
  componentDidMount () {
-   axios.get('')
+    axios.get('http://localhost/wordpress/wp-json/wp/v2/post')
        .then(res => this.setState({
            posts: res.data,
            isLoaded: true
        }))
        .catch(err => console.log(err))
    }
-
-
+   
    render() {
-    const {posts, isLoaded} = this.state;
+    const {posts} = this.state;
     return (
         <div>
             {posts.map(post =>
-            <PostItems 
+            <PostDetails 
                 key={post.id} 
                 post={post}
                 />
@@ -33,4 +32,4 @@ export class Posts extends Component {
 }
 }
 
-export default Posts
+export default Posts;

@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types';
 import axios from 'axios';
 
-export class PostItems extends Component {
+export class PostDetails extends Component {
 
    state = {
        imgUrl: '',
@@ -21,7 +21,6 @@ export class PostItems extends Component {
       
        Promise.all([getImageUrl, getAuthor]).then(res => {
 
-           console.log(res);
            this.setState({
                imgUrl: res[0].data.media_details.sizes.full.source_url,
                author: res[1].data.name,
@@ -33,7 +32,7 @@ export class PostItems extends Component {
  
    render() {
        const { title, excerpt } = this.props.post;
-       const {author, imgUrl, isLoaded} = this.state;
+       const {author, imgUrl} = this.state;
        return (
            <div>
               <h2>{title.rendered}</h2>
@@ -45,4 +44,4 @@ export class PostItems extends Component {
    }
 }
 
-export default PostItems;
+export default PostDetails;
